@@ -19,8 +19,8 @@ class SendEmailsScheduler(
     private val logger: Log = LogFactory.getLog(this.javaClass)
 
 
-//    @Scheduled(cron = "0 * * * * *") Для теста: отправка каждую минуту.
-    @Scheduled(cron = "@midnight")
+    @Scheduled(cron = "0 * * * * *") //Для теста: отправка каждую минуту.
+//    @Scheduled(cron = "@midnight")
     fun sendEmails() {
         val users = userRepository.findAll()
         val emailMessages = emailCreatorService.getEmailMessages(users)
