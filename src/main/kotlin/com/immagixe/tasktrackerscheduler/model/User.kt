@@ -1,9 +1,7 @@
 package com.immagixe.tasktrackerscheduler.model
 
-
 import java.io.Serializable
 import javax.persistence.*
-
 
 @Entity
 @Table(name = "users")
